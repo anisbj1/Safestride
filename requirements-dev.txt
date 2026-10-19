@@ -1,0 +1,4 @@
+platformio>=6.1.18,<7
+ruff>=0.5
+clang-format>=17
+pytest>=8

@@ -42,13 +42,27 @@ Pin assignments and board-specific options are configuration, not assumptions in
 
 ## Build and test
 
-Requirements: Python 3.11 or later, PlatformIO Core, and the PlatformIO ESP32 toolchain. The CI script also uses `ruff`, `clang-format`, and `pytest`; it resolves the repository's configured tool locations where available.
-
-From the repository root, run the complete verification suite:
+On Windows, from the repository root, bootstrap the local Python environment and run the complete verification suite:
 
 ```powershell
-python ci/check.py
+.\scripts\setup.ps1
 ```
+
+The script checks for Python 3.11+, creates `.venv`, installs the tools in
+`requirements-dev.txt` and the companion package/dependencies, then runs
+`ci/check.py`. If Python is missing, it offers to install Python 3.12 per-user
+with `winget`. The first verification downloads PlatformIO's ESP32 toolchain
+and libraries and can take several minutes. To install Python dependencies
+without running the full suite yet:
+
+```powershell
+.\scripts\setup.ps1 -SkipVerification
+.\.venv\Scripts\python.exe ci\check.py
+```
+
+Manual setup is also supported: install Python 3.11+, install
+`requirements-dev.txt`, install `companion/` in editable mode, then run
+`python ci/check.py`.
 
 Firmware commands (run from `firmware/`):
 
