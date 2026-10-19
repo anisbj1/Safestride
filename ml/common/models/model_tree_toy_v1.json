@@ -1,0 +1,18 @@
+{
+  "name": "tree_toy",
+  "family": "tree",
+  "model_version": 1,
+  "schema_id": 2,
+  "schema_version": 1,
+  "feature_count": 2,
+  "classes": ["class0", "class1"],
+  "training_data_hash": "fixture:FEATURE_SCHEMA.md-4B",
+  "trees": [
+    { "feature": 0, "threshold": 0.5,
+      "left": { "leaf": [0.9, 0.1] },
+      "right": { "leaf": [0.2, 0.8] } },
+    { "feature": 0, "threshold": 0.5,
+      "left": { "leaf": [0.5, 0.5] },
+      "right": { "leaf": [0.4, 0.6] } }
+  ]
+}

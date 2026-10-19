@@ -1,0 +1,68 @@
+# F21 companion application — Python desktop (D1: bleak + SQLite, CLI-first).
+# Independent of tools/ml pyprojects (those two mirror each other by F00 D13; this one does not).
+
+[project]
+name = "anarolepsy-companion"
+version = "0.1.0"
+description = "Local-first desktop companion for the narcolepsy-assist bracelet (not a medical device; observes only)."
+requires-python = ">=3.11"
+dependencies = [
+    "bleak>=0.21",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.5",
+    "pytest>=8",
+]
+
+[project.scripts]
+anarolepsy-app = "companion.app:main"
+anarolepsy-bench = "companion.bench:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.package-dir]
+# Source root lib/ installs as the importable package `companion` (spec §7).
+"companion" = "lib"
+
+[tool.setuptools]
+packages = [
+    "companion",
+    "companion.transport",
+    "companion.data",
+    "companion.domain",
+    "companion.features",
+    "companion.ui",
+    # W5 companion halves (integrator, P4'): the wheels shipped F21's shell
+    # without F16/F20/F22 until these were listed - verified by inspecting the
+    # built wheel (0 half modules before this change).
+    "companion.sync",
+    "companion.features.history",
+    "companion.features.explain",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+# E/F = pyflakes+pycodestyle essentials, I = import sorting, B = bugbear (mirrors tools/ml rule set).
+select = ["E", "F", "I", "B"]
+
+[tool.pytest.ini_options]
+# CI (ci/check.py 5/5) runs bare `pytest .`, so collection follows `testpaths`.
+# Include the W5 half-suites (F16 history, F20 sync, F22 explain) alongside F21's
+# scaffold: 189 tests total (integrator, W5 P4'). The half suites are packages
+# with self-mapping __init__ and package-relative imports, so whole-tree collection
+# is safe; ordering below avoids the F16-AUD-1 conftest-collision class.
+testpaths = [
+    "lib/sync/tests",
+    "lib/features/history/tests",
+    "lib/features/explain/tests",
+    "tests",
+]
+# "strict" markers keep free-form @pytest.mark.<anything> from silently becoming a second taxonomy.
+addopts = "--strict-markers"

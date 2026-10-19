@@ -1,0 +1,10 @@
+{
+  "schema_id": 2,
+  "schema_version": 1,
+  "features": [
+    { "name": "motion_energy", "unit": "g_rms", "source": "imu",
+      "normalization": { "method": "standardize", "mean": 100.0, "std": 10.0 } },
+    { "name": "hr_bpm", "unit": "bpm", "source": "ppg",
+      "normalization": { "method": "none" } }
+  ]
+}

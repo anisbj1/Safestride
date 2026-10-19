@@ -1,0 +1,138 @@
+{
+  "aggregate": {
+    "f1": 0.9090909090909091,
+    "false_alerts_per_day": 6.857142857142857,
+    "false_negatives": [],
+    "false_positives": [
+      {
+        "confidence": 0.5,
+        "nearest_label_dt_s": 10.0,
+        "session": "synthetic_sA",
+        "t_start_ms": 2410000
+      }
+    ],
+    "fn": 0,
+    "fp": 1,
+    "latency": {
+      "max_s": 50.0,
+      "mean_s": 26.0,
+      "median_s": 30.0,
+      "min_s": -20.0
+    },
+    "missed_event_rate": 0.0,
+    "precision": 0.8333333333333334,
+    "recall": 1.0,
+    "tp": 5
+  },
+  "comparison": [
+    {
+      "detector_id": "stub_stillness",
+      "f1": 0.9090909090909091,
+      "false_alerts_per_day": 6.857142857142857,
+      "fn": 0,
+      "fp": 1,
+      "latency": {
+        "max_s": 50.0,
+        "mean_s": 26.0,
+        "median_s": 30.0,
+        "min_s": -20.0
+      },
+      "missed_event_rate": 0.0,
+      "precision": 0.8333333333333334,
+      "recall": 1.0,
+      "tp": 5
+    }
+  ],
+  "config": {
+    "detector_id": "stub_stillness",
+    "event_match_tolerance_s": 60.0,
+    "split": "leave-one-session-out"
+  },
+  "dataset": {
+    "notes": {
+      "line_drops": 0,
+      "malformed_rows": 0,
+      "missing_prediction_files": [],
+      "per_session": {
+        "synthetic_sA": {
+          "duration_s": 7200.0,
+          "line_drops": 0,
+          "malformed_rows": 0,
+          "raw_drops": 0,
+          "unlabeled_coverage": 0.08333333333333333,
+          "unlabeled_s": 600.0
+        },
+        "synthetic_sB": {
+          "duration_s": 5400.0,
+          "line_drops": 0,
+          "malformed_rows": 0,
+          "raw_drops": 0,
+          "unlabeled_coverage": 0.0,
+          "unlabeled_s": 0.0
+        }
+      },
+      "raw_drops": 0,
+      "unlabeled_s_total": 600.0
+    },
+    "session_ids": [
+      "synthetic_sA",
+      "synthetic_sB"
+    ],
+    "total_duration_s": 12600.0,
+    "unlabeled_coverage": 0.047619047619047616
+  },
+  "disclaimer": "Detections are possible/suspected events with a confidence value. This report is evaluation output from an academic prototype \u2014 not a diagnosis, not a medical device.",
+  "folds": [
+    {
+      "detector_id": "stub_stillness",
+      "f1": 0.8571428571428571,
+      "false_alerts_per_day": 12.0,
+      "false_negatives": [],
+      "false_positives": [
+        {
+          "confidence": 0.5,
+          "nearest_label_dt_s": 10.0,
+          "session": "synthetic_sA",
+          "t_start_ms": 2410000
+        }
+      ],
+      "fn": 0,
+      "fold_index": 0,
+      "fp": 1,
+      "latency": {
+        "max_s": 50.0,
+        "mean_s": 16.666666666666668,
+        "median_s": 20.0,
+        "min_s": -20.0
+      },
+      "missed_event_rate": 0.0,
+      "precision": 0.75,
+      "recall": 1.0,
+      "test_session": "synthetic_sA",
+      "tp": 3
+    },
+    {
+      "detector_id": "stub_stillness",
+      "f1": 1.0,
+      "false_alerts_per_day": 0.0,
+      "false_negatives": [],
+      "false_positives": [],
+      "fn": 0,
+      "fold_index": 1,
+      "fp": 0,
+      "latency": {
+        "max_s": 50.0,
+        "mean_s": 40.0,
+        "median_s": 40.0,
+        "min_s": 30.0
+      },
+      "missed_event_rate": 0.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "test_session": "synthetic_sB",
+      "tp": 2
+    }
+  ],
+  "generated_by": "F29 ml/eval/run_eval.py (M2 skeleton)",
+  "schema_version": 1
+}

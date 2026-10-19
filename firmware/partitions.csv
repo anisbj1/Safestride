@@ -1,0 +1,20 @@
+# Name,    Type, SubType,  Offset,   Size,     Flags
+# firmware/partitions.csv — F18 spec §15.6 (A-03: 4 MB flash confirmed).
+# Minimal table: nvs (PHY calibration), one factory app, one LittleFS data
+# region sized per F18's constants (256 KB events + 288 KB windows + 32 KB KV
+# + ~192 KB segment/LittleFS slack = 768 KB).
+# NOTE (shared file, F18 owns content today): F30 (W8, OTA) needs dual app
+# slots + an otadata entry HERE — reshaping this table requires a change
+# request because F18 and F30 share it (event-storage design; F18 §13).
+# Activation: the integrator adds board_build.partitions = partitions.csv to
+# firmware/platformio.ini at P4 (platformio.ini is NOT F18-owned).
+nvs,      data, nvs,      0x9000,  0x6000,
+app0,     app,  factory,  0x10000, 0x140000,
+# NOTE (F18): the Name below is the LittleFS partition LABEL that
+# bw::storage::kLittleFsPartitionLabel (bw/storage/constants.h) passes to
+# LittleFS.begin() — the two must match or the mount (and the format
+# fallback) finds no partition (bench bug, COM14). Pinned by test_doc_claims.
+storage,  data, spiffs,   0x150000, 0xC0000,
+# ~1.94 MB (0x210000..0x400000) intentionally unallocated: reserved for
+# F30's second app slot + otadata (CR at W8). Do not grow `storage` into it
+# without that CR — F30 must fit two ~1.25 MB slots alongside LittleFS.

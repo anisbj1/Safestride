@@ -1,0 +1,12 @@
+{
+  "name": "linear_3class",
+  "family": "linear",
+  "model_version": 1,
+  "schema_id": 2,
+  "schema_version": 1,
+  "feature_count": 2,
+  "classes": ["class0", "class1", "class2"],
+  "training_data_hash": "fixture:ml-common-tests",
+  "weights": [[0.5, -0.25], [-1.0, 0.75], [0.0, 0.1]],
+  "bias": [0.1, -0.2, 0.05]
+}

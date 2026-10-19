@@ -1,0 +1,4 @@
+# Python build artifacts (root .gitignore covers __pycache__/.venv/.pytest_cache/.ruff_cache)
+build/
+dist/
+*.egg-info/

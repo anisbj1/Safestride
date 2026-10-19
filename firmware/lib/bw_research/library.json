@@ -1,0 +1,8 @@
+{
+  "name": "bw_research",
+  "version": "1.0.0",
+  "description": "F28 research capture: serial line formatting, ResearchStreamer (gated feature/event/marker rows, raw tee), no pipeline behavior change.",
+  "keywords": "research capture serial replay dataset",
+  "frameworks": "*",
+  "platforms": ["espressif32", "native"]
+}

@@ -1,0 +1,31 @@
+# MIRROR: this file must stay identical to ml/pyproject.toml (F00 decision D13).
+# If you change one, change the other in the same commit — or hoist both into a root
+# pyproject.toml via a change request instead of letting them drift.
+
+[project]
+name = "anarolepsy-tools"
+version = "0.1.0"
+description = "Capture, replay and export tooling for the narcolepsy-assist bracelet (not a medical device)."
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.5",
+    "pytest>=8",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+# E/F = pyflakes+pycodestyle essentials, I = import sorting, B = bugbear.
+# Keep this rule set in sync with ml/pyproject.toml (D13).
+select = ["E", "F", "I", "B"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# "strict" markers keep free-form @pytest.mark.<anything> from silently
+# becoming a second, unversioned test taxonomy.
+addopts = "--strict-markers"

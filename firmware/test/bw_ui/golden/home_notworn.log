@@ -1,0 +1,8 @@
+power on
+clear
+text 0,0 medium "Not worn"
+text 0,16 medium "Not worn"
+text 0,32 medium "HR --"
+bitmap 0,48 12,8
+text 16,48 medium "61%"
+flush ok

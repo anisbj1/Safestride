@@ -1,0 +1,14 @@
+Hardware list — owner-confirmed 2026-09-29 (recreated after the original file was lost)
+
+- ESP32-WROOM dev board (primary MCU, flash 4 MB confirmed)
+- Module ESP32-CAM (optional secondary, F27)
+- 0.96-inch OLED display module — controller **SH1106** (confirmed by owner; I2C @ 0x3C assumed)
+- Module TP4056 battery charger (charge-status wiring unknown — A-06)
+- Buzzer 5 V — **passive** (confirmed by owner — A-02)
+- MH-ET Live MAX30102 (PPG / heart rate, I2C 0x57)
+- GY-87 module, I2C (MPU6050 accel+gyro, I2C 0x68; WHO_AM_I to verify at bring-up — A-05)
+- Big button / small button (generic tactile squares; polarity to verify at bench — A-07)
+- RGB LED (polarity unknown, configurable in HAL — A-08)
+- Battery Li-Po 3.7 V 3000 mAh — 2 wires only, **no visible voltage divider** on an ADC pin (A-04)
+
+Open until F01 bench tests: A-04 (battery sensing), A-05 (WHO_AM_I), A-06 (TP4056 pins), A-07 (button polarity), A-08 (LED polarity).

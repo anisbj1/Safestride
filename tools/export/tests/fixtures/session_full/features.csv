@@ -1,0 +1,4 @@
+t_ms,boot_id,kind,quality,enmo_g,mag_std_g,jerk_rms_g_per_s,gyro_rms_dps,gravity_tilt_deg,dominant_freq_hz,stillness_ms,hr_valid,hr_bpm,hr_confidence,perfusion_index,ir_dc_level,sqi,motion_corrupted,hrv_valid,rmssd_ms,activity,confidence
+5000,7,motion,Good,0.0123,0.0456,0.0789,12.3,45.6,1.250,700,,,,,,,,,,,
+6000,7,ppg,Degraded,,,,,,,,1,63.5,0.875,0.04567,12345.6,0.900,0,0,0.0,,
+7000,7,context,,,,,,,,,,,,,,,,,,Walking,0.750

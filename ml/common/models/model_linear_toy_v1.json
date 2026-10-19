@@ -1,0 +1,12 @@
+{
+  "name": "linear_toy",
+  "family": "linear",
+  "model_version": 1,
+  "schema_id": 2,
+  "schema_version": 1,
+  "feature_count": 2,
+  "classes": ["class0", "class1"],
+  "training_data_hash": "fixture:FEATURE_SCHEMA.md-4A",
+  "weights": [[0.0, 0.0], [1.0, 0.0]],
+  "bias": [0.0, 0.0]
+}

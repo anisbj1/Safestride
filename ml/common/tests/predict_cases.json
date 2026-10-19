@@ -1,0 +1,19 @@
+{
+  "cases": [
+    { "model": "linear_toy", "v": [1.0, 72.0] },
+    { "model": "linear_toy", "v": [0.0, 0.0] },
+    { "model": "linear_toy", "v": [-3.0, 55.5] },
+    { "model": "linear_toy", "v": [2.5, 90.0] },
+    { "model": "tree_toy", "v": [1.0, 72.0] },
+    { "model": "tree_toy", "v": [0.0, 0.0] },
+    { "model": "tree_toy", "v": [0.5, 0.0] },
+    { "model": "tree_toy", "v": [0.5001, 72.0] },
+    { "model": "linear_3class", "v": [0.0, 0.0] },
+    { "model": "linear_3class", "v": [1.5, 68.0] },
+    { "model": "linear_3class", "v": [-2.0, 120.0] },
+    { "model": "tree_deep", "v": [0.0, 0.0] },
+    { "model": "tree_deep", "v": [1.0, 72.0] },
+    { "model": "tree_deep", "v": [0.5, 0.5] },
+    { "model": "tree_deep", "v": [-1.0, 100.0] }
+  ]
+}

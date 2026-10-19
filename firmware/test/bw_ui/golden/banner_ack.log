@@ -1,0 +1,12 @@
+power on
+clear
+text 0,0 medium "No data"
+text 0,16 medium "--"
+text 0,32 medium "HR --"
+bitmap 0,48 12,8
+text 16,48 medium "--"
+rect 0,0 128,16 off
+bitmap 1,1 14,12
+text 18,0 medium "Check? ACK"
+rect 0,15 128,1 on
+flush ok

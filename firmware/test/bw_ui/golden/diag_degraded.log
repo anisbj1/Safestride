@@ -1,0 +1,7 @@
+power on
+clear
+text 0,0 small "imu:ok ppg:degraded"
+text 0,10 small "mflt:5"
+text 0,20 small "heap 123456"
+text 0,30 small "ble:no mode:normal"
+flush ok

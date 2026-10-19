@@ -1,0 +1,8 @@
+{
+  "name": "bw_signal",
+  "version": "1.0.0",
+  "description": "F02 signal processing: IMU motion features (ENMO, gravity, stillness, dominant frequency) and PPG filtering, beat detection, heart rate and signal quality.",
+  "keywords": "signal ppg imu heart-rate actigraphy quality",
+  "frameworks": "*",
+  "platforms": ["espressif32", "native"]
+}

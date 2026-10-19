@@ -1,0 +1,40 @@
+# C++/Python formatting baseline for the anarolepsy bracelet repository. [F00 D12]
+# Derived from the existing skeleton (4-space indent, attached braces) rather than a
+# stock style, and pinned key-by-key so the result does not depend on which
+# clang-format version a contributor happens to have.
+# CI runs `clang-format --dry-run` over firmware/ (ci/check.py, D11).
+---
+Language: Cpp
+BasedOnStyle: LLVM
+Standard: c++17
+# --- indentation (skeleton already used 4 spaces; stock LLVM is 2) ---
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+ContinuationIndentWidth: 4
+AccessModifierOffset: -4
+NamespaceIndentation: None
+IndentCaseLabels: false
+IndentPPDirectives: None
+# --- width ---
+ColumnLimit: 100
+# --- braces: attached, matching the skeleton's style ---
+BreakBeforeBraces: Attach
+# --- short constructs stay on one line only when they are truly trivial ---
+AllowShortBlocksOnASingleLine: Never
+AllowShortFunctionsOnASingleLine: Inline
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: false
+AllowShortEnumsOnASingleLine: true
+# --- pointers/references ---
+PointerAlignment: Left
+DerivePointerAlignment: false
+# --- comments: keep the skeleton's two-space `}  // namespace` convention ---
+AlignTrailingComments: true
+SpacesBeforeTrailingComments: 2
+# --- includes: deterministic order within each block ---
+SortIncludes: CaseSensitive
+IncludeBlocks: Preserve
+# --- whitespace hygiene ---
+InsertNewlineAtEOF: true
+...

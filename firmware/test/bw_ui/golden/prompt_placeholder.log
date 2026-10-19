@@ -1,0 +1,4 @@
+power on
+clear
+text 0,0 medium "No prompts"
+flush ok

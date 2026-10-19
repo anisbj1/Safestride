@@ -1,0 +1,7 @@
+power on
+clear
+text 0,0 small "imu:n/a ppg:n/a"
+text 0,10 small "mflt:n/a"
+text 0,20 small "heap:n/a"
+text 0,30 small "ble:n/a mode:n/a"
+flush ok

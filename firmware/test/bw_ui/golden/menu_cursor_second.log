@@ -1,0 +1,10 @@
+power on
+clear
+text 0,0 medium "Menu"
+text 0,16 small " "
+text 10,16 small "Diagnostics"
+text 0,26 small ">"
+text 10,26 small "Home"
+text 0,36 small " "
+text 10,36 small "Ack alerts"
+flush ok

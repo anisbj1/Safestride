@@ -1,0 +1,11 @@
+{
+  "name": "bw_hal",
+  "version": "1.0.0",
+  "description": "F01 hardware abstraction layer: shared-I2C arbiter, sensor and device drivers behind the bw_core hardware interfaces.",
+  "keywords": "hal esp32 i2c max30102 mpu6050",
+  "frameworks": "*",
+  "platforms": ["espressif32", "native"],
+  "dependencies": {
+    "olikraus/U8g2": "^2.36.18"
+  }
+}

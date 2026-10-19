@@ -1,0 +1,2 @@
+seq,t_start_ms,boot_id,duration_ms,t_start_unix,confidence,reasons,payload_hex,quality_imu,quality_ppg,type,label,activity,alertness,detector_id,schema_version
+3,123456789,7,5000,1700000000,0.500,4100,deadbeef00010203,Good,Insufficient,UserMarked,Confirmed,Walking,Awake,5,1

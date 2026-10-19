@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "session_id": "research_20261017T000000Z",
+  "boot_id": 7,
+  "firmware_version": "0.1.0",
+  "started_utc": "2026-10-17T00:00:00Z",
+  "ended_utc": "2026-10-17T00:00:12Z",
+  "end_reason": "user",
+  "row_counts": {
+    "header": 1,
+    "imu": 3,
+    "ppg": 3,
+    "motion": 1,
+    "ppg_features": 1,
+    "context": 1,
+    "event": 1,
+    "marker": 2
+  },
+  "raw_drops": 0,
+  "imu_drops": 0,
+  "ppg_drops": 0,
+  "line_drops": 0,
+  "feature_missed": 0,
+  "drop_history": [
+    {"at_s": 0, "imu_drops": 0, "ppg_drops": 0, "line_drops": 0, "feature_missed": 0}
+  ],
+  "imu_period_ms": 20,
+  "imu_missing_samples": 0,
+  "ppg_period_ms": 10,
+  "ppg_missing_samples": 0,
+  "malformed_rows": 0,
+  "diagnostics_lines": 0,
+  "raw_tee": true,
+  "counters_as_of_hdr_seconds": 0
+}

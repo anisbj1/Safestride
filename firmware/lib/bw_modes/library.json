@@ -1,0 +1,8 @@
+{
+  "name": "bw_modes",
+  "version": "1.0.0",
+  "description": "F24 operating modes: ModeManager (legal-transition matrix, crossing-based auto day/night, LowPower hysteresis) and the per-mode profile table behind bw::ModeProfile.",
+  "keywords": "modes day night nap calibration research power profile",
+  "frameworks": "*",
+  "platforms": ["espressif32", "native"]
+}

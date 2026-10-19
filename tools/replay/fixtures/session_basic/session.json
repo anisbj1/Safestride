@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "session_id": "research_fixture0000T000000Z",
+  "boot_id": 7,
+  "firmware_version": "0.1.0",
+  "started_utc": "2026-01-01T00:00:00Z",
+  "ended_utc": "2026-01-01T00:00:12Z",
+  "end_reason": "user",
+  "row_counts": {
+    "header": 1
+  },
+  "raw_drops": 0,
+  "line_drops": 0,
+  "malformed_rows": 0,
+  "diagnostics_lines": 0,
+  "raw_tee": true,
+  "counters_as_of_hdr_seconds": 1
+}

@@ -1,0 +1,7 @@
+power on
+clear
+text 0,0 medium "Confirm?"
+text 0,10 small "event 42"
+text 0,20 small "reply in 8s"
+text 0,30 small "queued 2"
+flush ok

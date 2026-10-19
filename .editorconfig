@@ -1,0 +1,26 @@
+# Editor configuration for the anarolepsy bracelet repository. [F00 D12]
+# Mirrors .clang-format so editors agree with CI before a file is even saved.
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+# why: D12 pins the same whitespace hygiene clang-format enforces in CI.
+trim_trailing_whitespace = true
+
+[*.{h,cpp,ino}]
+indent_style = space
+indent_size = 4
+
+[*.py]
+indent_style = space
+indent_size = 4
+
+[*.{yml,yaml,toml,json}]
+indent_style = space
+indent_size = 2
+
+[*.md]
+# why: Markdown uses two trailing spaces as an explicit line break.
+trim_trailing_whitespace = false
